@@ -279,9 +279,11 @@ function componentLoaderProvider() {
     },
     setCtrlNameMapping: function(newFn) {
       componentToCtrl = newFn;
+      return this;
     },
     setTemplateMapping: function(newFn) {
       componentToTemplate = newFn;
+      return this;
     }
   };
 }
