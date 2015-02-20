@@ -148,6 +148,7 @@ function routerViewPortDirective($animate, $compile, $controller, $templateReque
     }, viewPortName);
   }
 }
+routerViewPortDirective.$inject = ["$animate", "$compile", "$controller", "$templateRequest", "$rootScope", "$location", "$componentLoader", "$router"];
 
 function routerViewPortFillContentDirective($compile) {
   return {
@@ -162,6 +163,7 @@ function routerViewPortFillContentDirective($compile) {
     }
   };
 }
+routerViewPortFillContentDirective.$inject = ["$compile"];
 
 function makeComponentString(name) {
   return [
@@ -247,6 +249,7 @@ function routerLinkDirective($router, $location, $parse) {
     }
   }
 }
+routerLinkDirective.$inject = ["$router", "$location", "$parse"];
 
 
 /**
